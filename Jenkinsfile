@@ -2,11 +2,17 @@ pipeline{
     agent any
     stages{
         stage("complie"){
-            sh'javac Test.java'
+            steps{
+                 sh'javac Test.java'
+            }
+           
         }
-        
+
         stage("run"){
-            sh'java Test'
+             steps{
+                 sh'java Test'
+            }
+           
         }
         
     }
