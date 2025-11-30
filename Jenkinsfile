@@ -1,19 +1,17 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage("complie"){
-            steps{
-                 sh'javac Test.java'
+
+    stages {
+        stage("compile") {
+            steps {
+                bat 'javac Test.java'
             }
-           
         }
 
-        stage("run"){
-             steps{
-                 sh'java Test'
+        stage("run") {
+            steps {
+                bat 'java Test'
             }
-           
         }
-        
     }
 }
